@@ -1,10 +1,12 @@
 ﻿using System;
+using Calculator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SalaryCalculatorTestProject
 { 
 
-  public class UnitTest1
+  [TestClass]
+  public class CalculatorTest
   {
       /*
        * To get hourly, divide annual salary by 2080
