@@ -29,5 +29,15 @@ namespace SalaryCalculatorTestProject
       //Assert
       Assert.AreEqual(104000,annualSalary);
     }
+
+    [TestMethod]
+    public void HourlyWageTest()
+    {
+      SalaryCalculator sc = new SalaryCalculator();
+
+      decimal hourlyWage = sc.GetHourlyWage(52000);
+
+      Assert.AreEqual(25, hourlyWage);
+    }
   }
 }
