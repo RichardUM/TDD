@@ -24,7 +24,7 @@ namespace Polymorphism
         public override string CalculateWeeklySalary(int weeklyHours, int wage)
         {
             var salary = weeklyHours * wage;
-            string result = String.Format("This HAPPY CONTRACTOR worked {weeklyHours} hrs.Paid for {weeklyHours} hrs at $ {wage} / hr = ${salary}" );
+            string result = String.Format("This HAPPY CONTRACTOR worked {0} hrs." + "Paid for {0} hrs at {1} " + "/hr = {2}", weeklyHours, wage, salary);
             
             Console.WriteLine($"\n " + result);
             Console.WriteLine("---------------------------------------------\n");

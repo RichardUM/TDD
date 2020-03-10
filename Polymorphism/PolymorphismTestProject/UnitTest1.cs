@@ -13,7 +13,7 @@ namespace PolymorphismTestProject
       //Arrange
       int weeklyHours = 55;
       int wage = 70;
-      int salary = 1;
+      int salary = 40 * wage;
       
       Employee e = new Employee();
       string expectedR = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
@@ -29,11 +29,11 @@ namespace PolymorphismTestProject
     {
       int weeklyHours = 55;
       int wage = 70;
-      int salary = 1;
+      int salary = weeklyHours* wage;
 
       Contractor e = new Contractor();
 
-      string expRes = $"This HAPPY CONTRACTOR worked {weeklyHours} hrs.Paid for {weeklyHours} hrs at {wage} / hr = {salary}";
+      string expRes =String.Format("This HAPPY CONTRACTOR worked {0} hrs." + "Paid for {0} hrs at {1} " + "/hr = {2}", weeklyHours, wage, salary);
 
       string response = e.CalculateWeeklySalary(weeklyHours, wage);
       
@@ -50,7 +50,7 @@ namespace PolymorphismTestProject
       int salary = 40 * wage;
 
       Employee e = new Employee();
-      string expectedR = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
+      string expectedR = String.Format(" P1 This ANGRY EMPLOYEE worked {0} hrs. " +
                                        "Paid for 40 hrs at $ {1}" +
                                        "/hr = ${2} \n", weeklyHours, wage, salary);
             //Act
@@ -68,7 +68,7 @@ namespace PolymorphismTestProject
 
       Contractor e = new Contractor();
 
-      string expRes = $"This HAPPY CONTRACTOR worked {weeklyHours} hrs.Paid for {weeklyHours} hrs at {wage} / hr = {salary}";
+      string expRes = String.Format("p2 This HAPPY CONTRACTOR worked {0} hrs." + "Paid for {0} hrs at {1} " + "/hr = {2}", weeklyHours, wage, salary);
 
       string response = e.CalculateWeeklySalary(weeklyHours, wage);
 
