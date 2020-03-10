@@ -8,9 +8,9 @@ namespace Calculator
 {
     public class SalaryCalculator
     {
+      const int HourInYear = 2080;
       public decimal GetAnnualSalary(decimal hourlyWage)
       {
-        const int HourInYear = 2080;
         decimal annualSalary = hourlyWage * HourInYear;
         return annualSalary;
       }
